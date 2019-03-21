@@ -1,13 +1,13 @@
-Note:
+CompteRendus:
     type: entity
-    table: notes
+    table: compte_rendus
     indexes:
-        fk_notes_formations1_idx:
+        fk_compte_rendus_professeurs1_idx:
             columns:
-                - formations_id
-        fk_notes_salaries1_idx:
+                - professeurs_id
+        fk_compte_rendus_sessions1_idx:
             columns:
-                - salaries_id
+                - sessions_id
     id:
         id:
             type: integer
@@ -18,30 +18,31 @@ Note:
             generator:
                 strategy: IDENTITY
     fields:
-        note:
-            type: float
-            nullable: true
-            precision: 10
-            scale: 0
+        commentaire:
+            type: string
+            nullable: false
+            length: 45
+            options:
+                fixed: false
     manyToOne:
-        formations:
-            targetEntity: Formation
+        professeurs:
+            targetEntity: Professeurs
             cascade: {  }
             fetch: LAZY
             mappedBy: null
             inversedBy: null
             joinColumns:
-                formations_id:
+                professeurs_id:
                     referencedColumnName: id
             orphanRemoval: false
-        salaries:
-            targetEntity: Salarie
+        sessions:
+            targetEntity: Sessions
             cascade: {  }
             fetch: LAZY
             mappedBy: null
             inversedBy: null
             joinColumns:
-                salaries_id:
+                sessions_id:
                     referencedColumnName: id
             orphanRemoval: false
     lifecycleCallbacks: {  }

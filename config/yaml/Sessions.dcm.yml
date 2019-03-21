@@ -1,4 +1,4 @@
-Session:
+Sessions:
     type: entity
     table: sessions
     indexes:
@@ -31,7 +31,7 @@ Session:
             column: dateFin
     manyToOne:
         formations:
-            targetEntity: Formation
+            targetEntity: Formations
             cascade: {  }
             fetch: LAZY
             mappedBy: null
@@ -41,7 +41,7 @@ Session:
                     referencedColumnName: id
             orphanRemoval: false
         professeurs:
-            targetEntity: Professeur
+            targetEntity: Professeurs
             cascade: {  }
             fetch: LAZY
             mappedBy: null
@@ -51,7 +51,7 @@ Session:
                     referencedColumnName: id
             orphanRemoval: false
         salles:
-            targetEntity: Salle
+            targetEntity: Salles
             cascade: {  }
             fetch: LAZY
             mappedBy: null

@@ -3,9 +3,9 @@
 
 
 /**
- * Entreprise
+ * Entreprises
  */
-class Entreprise
+class Entreprises
 {
     /**
      * @var integer
@@ -33,12 +33,12 @@ class Entreprise
      *
      * @param string $nom
      *
-     * @return Entreprise
+     * @return Entreprises
      */
     public function setNom($nom)
     {
         $this->nom = $nom;
-
+    
         return $this;
     }
 

@@ -1,10 +1,10 @@
-Salarie:
+Formations:
     type: entity
-    table: salaries
+    table: formations
     indexes:
-        fk_salaries_entreprises1_idx:
+        fk_formations_professeurs1_idx:
             columns:
-                - entreprises_id
+                - professeurs_id
     id:
         id:
             type: integer
@@ -21,27 +21,29 @@ Salarie:
             length: 45
             options:
                 fixed: false
-        prenom:
-            type: string
+        datedebut:
+            type: datetime
             nullable: false
-            length: 45
-            options:
-                fixed: false
-        poste:
-            type: string
+            column: dateDebut
+        datefin:
+            type: datetime
             nullable: false
-            length: 45
-            options:
-                fixed: false
+            column: dateFin
+        !!binary Y2/ju3Q=:
+            type: float
+            nullable: false
+            precision: 10
+            scale: 0
+            column: coût
     manyToOne:
-        entreprises:
-            targetEntity: Entreprise
+        professeurs:
+            targetEntity: Professeurs
             cascade: {  }
             fetch: LAZY
             mappedBy: null
             inversedBy: null
             joinColumns:
-                entreprises_id:
+                professeurs_id:
                     referencedColumnName: id
             orphanRemoval: false
     lifecycleCallbacks: {  }

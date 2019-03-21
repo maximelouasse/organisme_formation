@@ -1,4 +1,4 @@
-Salle:
+Salles:
     type: entity
     table: salles
     id:

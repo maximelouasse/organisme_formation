@@ -3,9 +3,9 @@
 
 
 /**
- * Note
+ * Notes
  */
-class Note
+class Notes
 {
     /**
      * @var integer
@@ -43,12 +43,12 @@ class Note
      *
      * @param float $note
      *
-     * @return Note
+     * @return Notes
      */
     public function setNote($note)
     {
         $this->note = $note;
-
+    
         return $this;
     }
 
@@ -67,12 +67,12 @@ class Note
      *
      * @param \Formations $formations
      *
-     * @return Note
+     * @return Notes
      */
     public function setFormations(\Formations $formations = null)
     {
         $this->formations = $formations;
-
+    
         return $this;
     }
 
@@ -91,12 +91,12 @@ class Note
      *
      * @param \Salaries $salaries
      *
-     * @return Note
+     * @return Notes
      */
     public function setSalaries(\Salaries $salaries = null)
     {
         $this->salaries = $salaries;
-
+    
         return $this;
     }
 
