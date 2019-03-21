@@ -1,0 +1,47 @@
+Note:
+    type: entity
+    table: notes
+    indexes:
+        fk_notes_formations1_idx:
+            columns:
+                - formations_id
+        fk_notes_salaries1_idx:
+            columns:
+                - salaries_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        note:
+            type: float
+            nullable: true
+            precision: 10
+            scale: 0
+    manyToOne:
+        formations:
+            targetEntity: Formation
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                formations_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+        salaries:
+            targetEntity: Salarie
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                salaries_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

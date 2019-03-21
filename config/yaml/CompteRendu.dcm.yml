@@ -1,0 +1,48 @@
+CompteRendu:
+    type: entity
+    table: compte_rendus
+    indexes:
+        fk_compte_rendus_professeurs1_idx:
+            columns:
+                - professeurs_id
+        fk_compte_rendus_sessions1_idx:
+            columns:
+                - sessions_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        commentaire:
+            type: string
+            nullable: false
+            length: 45
+            options:
+                fixed: false
+    manyToOne:
+        professeurs:
+            targetEntity: Professeur
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                professeurs_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+        sessions:
+            targetEntity: Session
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                sessions_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

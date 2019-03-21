@@ -1,0 +1,49 @@
+Formation:
+    type: entity
+    table: formations
+    indexes:
+        fk_formations_professeurs1_idx:
+            columns:
+                - professeurs_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        nom:
+            type: string
+            nullable: false
+            length: 45
+            options:
+                fixed: false
+        datedebut:
+            type: datetime
+            nullable: false
+            column: dateDebut
+        datefin:
+            type: datetime
+            nullable: false
+            column: dateFin
+        !!binary Y2/ju3Q=:
+            type: float
+            nullable: false
+            precision: 10
+            scale: 0
+            column: coût
+    manyToOne:
+        professeurs:
+            targetEntity: Professeur
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                professeurs_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

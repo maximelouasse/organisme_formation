@@ -1,0 +1,47 @@
+Salarie:
+    type: entity
+    table: salaries
+    indexes:
+        fk_salaries_entreprises1_idx:
+            columns:
+                - entreprises_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        nom:
+            type: string
+            nullable: false
+            length: 45
+            options:
+                fixed: false
+        prenom:
+            type: string
+            nullable: false
+            length: 45
+            options:
+                fixed: false
+        poste:
+            type: string
+            nullable: false
+            length: 45
+            options:
+                fixed: false
+    manyToOne:
+        entreprises:
+            targetEntity: Entreprise
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                entreprises_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

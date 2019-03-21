@@ -1,0 +1,63 @@
+Session:
+    type: entity
+    table: sessions
+    indexes:
+        fk_sessions_professeurs1_idx:
+            columns:
+                - professeurs_id
+        fk_sessions_salles1_idx:
+            columns:
+                - salles_id
+        fk_sessions_formations1_idx:
+            columns:
+                - formations_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        datedebut:
+            type: datetime
+            nullable: false
+            column: dateDebut
+        datefin:
+            type: datetime
+            nullable: false
+            column: dateFin
+    manyToOne:
+        formations:
+            targetEntity: Formation
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                formations_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+        professeurs:
+            targetEntity: Professeur
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                professeurs_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+        salles:
+            targetEntity: Salle
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                salles_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }
