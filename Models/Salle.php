@@ -38,7 +38,7 @@ class Salle
     public function setNom($nom)
     {
         $this->nom = $nom;
-
+    
         return $this;
     }
 

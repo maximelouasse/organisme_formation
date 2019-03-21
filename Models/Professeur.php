@@ -43,7 +43,7 @@ class Professeur
     public function setNom($nom)
     {
         $this->nom = $nom;
-
+    
         return $this;
     }
 
@@ -67,7 +67,7 @@ class Professeur
     public function setPrenom($prenom)
     {
         $this->prenom = $prenom;
-
+    
         return $this;
     }
 

@@ -37,7 +37,7 @@ Formation:
             column: coût
     manyToOne:
         professeurs:
-            targetEntity: Professeur
+            targetEntity: Professeurs
             cascade: {  }
             fetch: LAZY
             mappedBy: null

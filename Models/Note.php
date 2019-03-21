@@ -48,7 +48,7 @@ class Note
     public function setNote($note)
     {
         $this->note = $note;
-
+    
         return $this;
     }
 
@@ -72,7 +72,7 @@ class Note
     public function setFormations(\Formations $formations = null)
     {
         $this->formations = $formations;
-
+    
         return $this;
     }
 
@@ -96,7 +96,7 @@ class Note
     public function setSalaries(\Salaries $salaries = null)
     {
         $this->salaries = $salaries;
-
+    
         return $this;
     }
 

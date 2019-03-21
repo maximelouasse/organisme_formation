@@ -48,7 +48,7 @@ class CompteRendu
     public function setCommentaire($commentaire)
     {
         $this->commentaire = $commentaire;
-
+    
         return $this;
     }
 
@@ -72,7 +72,7 @@ class CompteRendu
     public function setProfesseurs(\Professeurs $professeurs = null)
     {
         $this->professeurs = $professeurs;
-
+    
         return $this;
     }
 
@@ -96,7 +96,7 @@ class CompteRendu
     public function setSessions(\Sessions $sessions = null)
     {
         $this->sessions = $sessions;
-
+    
         return $this;
     }
 

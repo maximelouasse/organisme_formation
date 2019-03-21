@@ -26,7 +26,7 @@ CompteRendu:
                 fixed: false
     manyToOne:
         professeurs:
-            targetEntity: Professeur
+            targetEntity: Professeurs
             cascade: {  }
             fetch: LAZY
             mappedBy: null
@@ -36,7 +36,7 @@ CompteRendu:
                     referencedColumnName: id
             orphanRemoval: false
         sessions:
-            targetEntity: Session
+            targetEntity: Sessions
             cascade: {  }
             fetch: LAZY
             mappedBy: null

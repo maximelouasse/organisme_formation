@@ -58,7 +58,7 @@ class Formation
     public function setNom($nom)
     {
         $this->nom = $nom;
-
+    
         return $this;
     }
 
@@ -82,7 +82,7 @@ class Formation
     public function setDatedebut($datedebut)
     {
         $this->datedebut = $datedebut;
-
+    
         return $this;
     }
 
@@ -106,7 +106,7 @@ class Formation
     public function setDatefin($datefin)
     {
         $this->datefin = $datefin;
-
+    
         return $this;
     }
 
@@ -130,7 +130,7 @@ class Formation
     public function setCoã»t($coã»t)
     {
         $this->coã»t = $coã»t;
-
+    
         return $this;
     }
 
@@ -154,7 +154,7 @@ class Formation
     public function setProfesseurs(\Professeurs $professeurs = null)
     {
         $this->professeurs = $professeurs;
-
+    
         return $this;
     }
 

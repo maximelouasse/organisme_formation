@@ -53,7 +53,7 @@ class Salarie
     public function setNom($nom)
     {
         $this->nom = $nom;
-
+    
         return $this;
     }
 
@@ -77,7 +77,7 @@ class Salarie
     public function setPrenom($prenom)
     {
         $this->prenom = $prenom;
-
+    
         return $this;
     }
 
@@ -101,7 +101,7 @@ class Salarie
     public function setPoste($poste)
     {
         $this->poste = $poste;
-
+    
         return $this;
     }
 
@@ -125,7 +125,7 @@ class Salarie
     public function setEntreprises(\Entreprises $entreprises = null)
     {
         $this->entreprises = $entreprises;
-
+    
         return $this;
     }
 

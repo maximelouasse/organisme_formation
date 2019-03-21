@@ -58,7 +58,7 @@ class Session
     public function setDatedebut($datedebut)
     {
         $this->datedebut = $datedebut;
-
+    
         return $this;
     }
 
@@ -82,7 +82,7 @@ class Session
     public function setDatefin($datefin)
     {
         $this->datefin = $datefin;
-
+    
         return $this;
     }
 
@@ -106,7 +106,7 @@ class Session
     public function setFormations(\Formations $formations = null)
     {
         $this->formations = $formations;
-
+    
         return $this;
     }
 
@@ -130,7 +130,7 @@ class Session
     public function setProfesseurs(\Professeurs $professeurs = null)
     {
         $this->professeurs = $professeurs;
-
+    
         return $this;
     }
 
@@ -154,7 +154,7 @@ class Session
     public function setSalles(\Salles $salles = null)
     {
         $this->salles = $salles;
-
+    
         return $this;
     }
 

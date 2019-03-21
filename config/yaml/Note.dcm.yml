@@ -25,7 +25,7 @@ Note:
             scale: 0
     manyToOne:
         formations:
-            targetEntity: Formation
+            targetEntity: Formations
             cascade: {  }
             fetch: LAZY
             mappedBy: null
@@ -35,7 +35,7 @@ Note:
                     referencedColumnName: id
             orphanRemoval: false
         salaries:
-            targetEntity: Salarie
+            targetEntity: Salaries
             cascade: {  }
             fetch: LAZY
             mappedBy: null
