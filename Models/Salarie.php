@@ -3,9 +3,9 @@
 
 
 /**
- * Salaries
+ * Salarie
  */
-class Salaries
+class Salarie
 {
     /**
      * @var integer
@@ -48,12 +48,12 @@ class Salaries
      *
      * @param string $nom
      *
-     * @return Salaries
+     * @return Salarie
      */
     public function setNom($nom)
     {
         $this->nom = $nom;
-    
+
         return $this;
     }
 
@@ -72,12 +72,12 @@ class Salaries
      *
      * @param string $prenom
      *
-     * @return Salaries
+     * @return Salarie
      */
     public function setPrenom($prenom)
     {
         $this->prenom = $prenom;
-    
+
         return $this;
     }
 
@@ -96,12 +96,12 @@ class Salaries
      *
      * @param string $poste
      *
-     * @return Salaries
+     * @return Salarie
      */
     public function setPoste($poste)
     {
         $this->poste = $poste;
-    
+
         return $this;
     }
 
@@ -120,12 +120,12 @@ class Salaries
      *
      * @param \Entreprises $entreprises
      *
-     * @return Salaries
+     * @return Salarie
      */
     public function setEntreprises(\Entreprises $entreprises = null)
     {
         $this->entreprises = $entreprises;
-    
+
         return $this;
     }
 

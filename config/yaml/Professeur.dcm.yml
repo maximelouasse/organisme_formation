@@ -1,6 +1,6 @@
-Entreprises:
+Professeur:
     type: entity
-    table: entreprises
+    table: professeurs
     id:
         id:
             type: integer
@@ -12,6 +12,12 @@ Entreprises:
                 strategy: IDENTITY
     fields:
         nom:
+            type: string
+            nullable: false
+            length: 45
+            options:
+                fixed: false
+        prenom:
             type: string
             nullable: false
             length: 45

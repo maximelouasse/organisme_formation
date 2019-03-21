@@ -3,9 +3,9 @@
 
 
 /**
- * CompteRendus
+ * CompteRendu
  */
-class CompteRendus
+class CompteRendu
 {
     /**
      * @var integer
@@ -43,12 +43,12 @@ class CompteRendus
      *
      * @param string $commentaire
      *
-     * @return CompteRendus
+     * @return CompteRendu
      */
     public function setCommentaire($commentaire)
     {
         $this->commentaire = $commentaire;
-    
+
         return $this;
     }
 
@@ -67,12 +67,12 @@ class CompteRendus
      *
      * @param \Professeurs $professeurs
      *
-     * @return CompteRendus
+     * @return CompteRendu
      */
     public function setProfesseurs(\Professeurs $professeurs = null)
     {
         $this->professeurs = $professeurs;
-    
+
         return $this;
     }
 
@@ -91,12 +91,12 @@ class CompteRendus
      *
      * @param \Sessions $sessions
      *
-     * @return CompteRendus
+     * @return CompteRendu
      */
     public function setSessions(\Sessions $sessions = null)
     {
         $this->sessions = $sessions;
-    
+
         return $this;
     }
 

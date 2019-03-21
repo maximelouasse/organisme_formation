@@ -3,14 +3,19 @@
 
 
 /**
- * Sessions
+ * Formation
  */
-class Sessions
+class Formation
 {
     /**
      * @var integer
      */
     private $id;
+
+    /**
+     * @var string
+     */
+    private $nom;
 
     /**
      * @var \DateTime
@@ -23,19 +28,14 @@ class Sessions
     private $datefin;
 
     /**
-     * @var \Formations
+     * @var float
      */
-    private $formations;
+    private $coã»t;
 
     /**
      * @var \Professeurs
      */
     private $professeurs;
-
-    /**
-     * @var \Salles
-     */
-    private $salles;
 
 
     /**
@@ -49,16 +49,40 @@ class Sessions
     }
 
     /**
+     * Set nom
+     *
+     * @param string $nom
+     *
+     * @return Formation
+     */
+    public function setNom($nom)
+    {
+        $this->nom = $nom;
+
+        return $this;
+    }
+
+    /**
+     * Get nom
+     *
+     * @return string
+     */
+    public function getNom()
+    {
+        return $this->nom;
+    }
+
+    /**
      * Set datedebut
      *
      * @param \DateTime $datedebut
      *
-     * @return Sessions
+     * @return Formation
      */
     public function setDatedebut($datedebut)
     {
         $this->datedebut = $datedebut;
-    
+
         return $this;
     }
 
@@ -77,12 +101,12 @@ class Sessions
      *
      * @param \DateTime $datefin
      *
-     * @return Sessions
+     * @return Formation
      */
     public function setDatefin($datefin)
     {
         $this->datefin = $datefin;
-    
+
         return $this;
     }
 
@@ -97,27 +121,27 @@ class Sessions
     }
 
     /**
-     * Set formations
+     * Set coã»t
      *
-     * @param \Formations $formations
+     * @param float $coã»t
      *
-     * @return Sessions
+     * @return Formation
      */
-    public function setFormations(\Formations $formations = null)
+    public function setCoã»t($coã»t)
     {
-        $this->formations = $formations;
-    
+        $this->coã»t = $coã»t;
+
         return $this;
     }
 
     /**
-     * Get formations
+     * Get coã»t
      *
-     * @return \Formations
+     * @return float
      */
-    public function getFormations()
+    public function getCoã»t()
     {
-        return $this->formations;
+        return $this->coã»t;
     }
 
     /**
@@ -125,12 +149,12 @@ class Sessions
      *
      * @param \Professeurs $professeurs
      *
-     * @return Sessions
+     * @return Formation
      */
     public function setProfesseurs(\Professeurs $professeurs = null)
     {
         $this->professeurs = $professeurs;
-    
+
         return $this;
     }
 
@@ -142,30 +166,6 @@ class Sessions
     public function getProfesseurs()
     {
         return $this->professeurs;
-    }
-
-    /**
-     * Set salles
-     *
-     * @param \Salles $salles
-     *
-     * @return Sessions
-     */
-    public function setSalles(\Salles $salles = null)
-    {
-        $this->salles = $salles;
-    
-        return $this;
-    }
-
-    /**
-     * Get salles
-     *
-     * @return \Salles
-     */
-    public function getSalles()
-    {
-        return $this->salles;
     }
 }
 

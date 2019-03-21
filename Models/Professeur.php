@@ -3,9 +3,9 @@
 
 
 /**
- * Salles
+ * Professeur
  */
-class Salles
+class Professeur
 {
     /**
      * @var integer
@@ -16,6 +16,11 @@ class Salles
      * @var string
      */
     private $nom;
+
+    /**
+     * @var string
+     */
+    private $prenom;
 
 
     /**
@@ -33,12 +38,12 @@ class Salles
      *
      * @param string $nom
      *
-     * @return Salles
+     * @return Professeur
      */
     public function setNom($nom)
     {
         $this->nom = $nom;
-    
+
         return $this;
     }
 
@@ -50,6 +55,30 @@ class Salles
     public function getNom()
     {
         return $this->nom;
+    }
+
+    /**
+     * Set prenom
+     *
+     * @param string $prenom
+     *
+     * @return Professeur
+     */
+    public function setPrenom($prenom)
+    {
+        $this->prenom = $prenom;
+
+        return $this;
+    }
+
+    /**
+     * Get prenom
+     *
+     * @return string
+     */
+    public function getPrenom()
+    {
+        return $this->prenom;
     }
 }
 
