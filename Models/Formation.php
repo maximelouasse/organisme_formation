@@ -1,7 +1,4 @@
 <?php
-
-
-
 /**
  * Formation
  */
@@ -11,33 +8,26 @@ class Formation
      * @var integer
      */
     private $id;
-
     /**
      * @var string
      */
     private $nom;
-
     /**
      * @var \DateTime
      */
     private $datedebut;
-
     /**
      * @var \DateTime
      */
     private $datefin;
-
     /**
      * @var float
      */
-    private $coã»t;
-
+    private $cout;
     /**
      * @var \Professeur
      */
     private $professeurs;
-
-
     /**
      * Get id
      *
@@ -47,7 +37,6 @@ class Formation
     {
         return $this->id;
     }
-
     /**
      * Set nom
      *
@@ -61,7 +50,6 @@ class Formation
     
         return $this;
     }
-
     /**
      * Get nom
      *
@@ -71,7 +59,6 @@ class Formation
     {
         return $this->nom;
     }
-
     /**
      * Set datedebut
      *
@@ -85,7 +72,6 @@ class Formation
     
         return $this;
     }
-
     /**
      * Get datedebut
      *
@@ -95,7 +81,6 @@ class Formation
     {
         return $this->datedebut;
     }
-
     /**
      * Set datefin
      *
@@ -109,7 +94,6 @@ class Formation
     
         return $this;
     }
-
     /**
      * Get datefin
      *
@@ -119,31 +103,28 @@ class Formation
     {
         return $this->datefin;
     }
-
     /**
-     * Set coã»t
+     * Set cout
      *
-     * @param float $coã»t
+     * @param float $cout
      *
      * @return Formation
      */
-    public function setCoã»t($coã»t)
+    public function setCout($cout)
     {
-        $this->coã»t = $coã»t;
+        $this->cout = $cout;
     
         return $this;
     }
-
     /**
-     * Get coã»t
+     * Get cout
      *
      * @return float
      */
-    public function getCoã»t()
+    public function getCout()
     {
-        return $this->coã»t;
+        return $this->cout;
     }
-
     /**
      * Set professeurs
      *
@@ -157,7 +138,6 @@ class Formation
     
         return $this;
     }
-
     /**
      * Get professeurs
      *
@@ -168,4 +148,3 @@ class Formation
         return $this->professeurs;
     }
 }
-

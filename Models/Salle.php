@@ -1,7 +1,4 @@
 <?php
-
-
-
 /**
  * Salle
  */
@@ -11,13 +8,10 @@ class Salle
      * @var integer
      */
     private $id;
-
     /**
      * @var string
      */
     private $nom;
-
-
     /**
      * Get id
      *
@@ -27,7 +21,6 @@ class Salle
     {
         return $this->id;
     }
-
     /**
      * Set nom
      *
@@ -41,7 +34,6 @@ class Salle
     
         return $this;
     }
-
     /**
      * Get nom
      *
@@ -52,4 +44,3 @@ class Salle
         return $this->nom;
     }
 }
-

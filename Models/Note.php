@@ -1,7 +1,4 @@
 <?php
-
-
-
 /**
  * Note
  */
@@ -11,23 +8,18 @@ class Note
      * @var integer
      */
     private $id;
-
     /**
      * @var float
      */
     private $note;
-
     /**
      * @var \Formation
      */
     private $formations;
-
     /**
      * @var \Salarie
      */
     private $salaries;
-
-
     /**
      * Get id
      *
@@ -37,7 +29,6 @@ class Note
     {
         return $this->id;
     }
-
     /**
      * Set note
      *
@@ -51,7 +42,6 @@ class Note
     
         return $this;
     }
-
     /**
      * Get note
      *
@@ -61,7 +51,6 @@ class Note
     {
         return $this->note;
     }
-
     /**
      * Set formations
      *
@@ -75,7 +64,6 @@ class Note
     
         return $this;
     }
-
     /**
      * Get formations
      *
@@ -85,7 +73,6 @@ class Note
     {
         return $this->formations;
     }
-
     /**
      * Set salaries
      *
@@ -99,7 +86,6 @@ class Note
     
         return $this;
     }
-
     /**
      * Get salaries
      *
@@ -110,4 +96,3 @@ class Note
         return $this->salaries;
     }
 }
-

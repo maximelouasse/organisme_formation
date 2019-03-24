@@ -1,7 +1,4 @@
 <?php
-
-
-
 /**
  * Entreprise
  */
@@ -11,13 +8,10 @@ class Entreprise
      * @var integer
      */
     private $id;
-
     /**
      * @var string
      */
     private $nom;
-
-
     /**
      * Get id
      *
@@ -27,7 +21,6 @@ class Entreprise
     {
         return $this->id;
     }
-
     /**
      * Set nom
      *
@@ -41,7 +34,6 @@ class Entreprise
     
         return $this;
     }
-
     /**
      * Get nom
      *
@@ -52,4 +44,3 @@ class Entreprise
         return $this->nom;
     }
 }
-

@@ -1,7 +1,4 @@
 <?php
-
-
-
 /**
  * Salarie
  */
@@ -11,28 +8,22 @@ class Salarie
      * @var integer
      */
     private $id;
-
     /**
      * @var string
      */
     private $nom;
-
     /**
      * @var string
      */
     private $prenom;
-
     /**
      * @var string
      */
     private $poste;
-
     /**
      * @var \Entreprise
      */
     private $entreprises;
-
-
     /**
      * Get id
      *
@@ -42,7 +33,6 @@ class Salarie
     {
         return $this->id;
     }
-
     /**
      * Set nom
      *
@@ -56,7 +46,6 @@ class Salarie
     
         return $this;
     }
-
     /**
      * Get nom
      *
@@ -66,7 +55,6 @@ class Salarie
     {
         return $this->nom;
     }
-
     /**
      * Set prenom
      *
@@ -80,7 +68,6 @@ class Salarie
     
         return $this;
     }
-
     /**
      * Get prenom
      *
@@ -90,7 +77,6 @@ class Salarie
     {
         return $this->prenom;
     }
-
     /**
      * Set poste
      *
@@ -104,7 +90,6 @@ class Salarie
     
         return $this;
     }
-
     /**
      * Get poste
      *
@@ -114,7 +99,6 @@ class Salarie
     {
         return $this->poste;
     }
-
     /**
      * Set entreprises
      *
@@ -128,7 +112,6 @@ class Salarie
     
         return $this;
     }
-
     /**
      * Get entreprises
      *
@@ -139,4 +122,3 @@ class Salarie
         return $this->entreprises;
     }
 }
-

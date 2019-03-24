@@ -1,7 +1,4 @@
 <?php
-
-
-
 /**
  * CompteRendu
  */
@@ -11,23 +8,18 @@ class CompteRendu
      * @var integer
      */
     private $id;
-
     /**
      * @var string
      */
     private $commentaire;
-
     /**
      * @var \Professeur
      */
     private $professeurs;
-
     /**
      * @var \Session
      */
     private $sessions;
-
-
     /**
      * Get id
      *
@@ -37,7 +29,6 @@ class CompteRendu
     {
         return $this->id;
     }
-
     /**
      * Set commentaire
      *
@@ -51,7 +42,6 @@ class CompteRendu
     
         return $this;
     }
-
     /**
      * Get commentaire
      *
@@ -61,7 +51,6 @@ class CompteRendu
     {
         return $this->commentaire;
     }
-
     /**
      * Set professeurs
      *
@@ -75,7 +64,6 @@ class CompteRendu
     
         return $this;
     }
-
     /**
      * Get professeurs
      *
@@ -85,7 +73,6 @@ class CompteRendu
     {
         return $this->professeurs;
     }
-
     /**
      * Set sessions
      *
@@ -99,7 +86,6 @@ class CompteRendu
     
         return $this;
     }
-
     /**
      * Get sessions
      *
@@ -110,4 +96,3 @@ class CompteRendu
         return $this->sessions;
     }
 }
-

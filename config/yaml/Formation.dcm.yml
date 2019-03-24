@@ -1,5 +1,4 @@
 Formation:
-    repositoryClass: FormationRepository
     type: entity
     table: formations
     indexes:
@@ -30,12 +29,11 @@ Formation:
             type: datetime
             nullable: false
             column: dateFin
-        !!binary Y2/ju3Q=:
+        cout:
             type: float
             nullable: false
             precision: 10
             scale: 0
-            column: coût
     manyToOne:
         professeurs:
             targetEntity: Professeur

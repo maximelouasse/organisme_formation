@@ -1,7 +1,4 @@
 <?php
-
-
-
 /**
  * Session
  */
@@ -11,33 +8,26 @@ class Session
      * @var integer
      */
     private $id;
-
     /**
      * @var \DateTime
      */
     private $datedebut;
-
     /**
      * @var \DateTime
      */
     private $datefin;
-
     /**
      * @var \Formation
      */
     private $formations;
-
     /**
      * @var \Professeur
      */
     private $professeurs;
-
     /**
      * @var \Salle
      */
     private $salles;
-
-
     /**
      * Get id
      *
@@ -47,7 +37,6 @@ class Session
     {
         return $this->id;
     }
-
     /**
      * Set datedebut
      *
@@ -61,7 +50,6 @@ class Session
     
         return $this;
     }
-
     /**
      * Get datedebut
      *
@@ -71,7 +59,6 @@ class Session
     {
         return $this->datedebut;
     }
-
     /**
      * Set datefin
      *
@@ -85,7 +72,6 @@ class Session
     
         return $this;
     }
-
     /**
      * Get datefin
      *
@@ -95,7 +81,6 @@ class Session
     {
         return $this->datefin;
     }
-
     /**
      * Set formations
      *
@@ -109,7 +94,6 @@ class Session
     
         return $this;
     }
-
     /**
      * Get formations
      *
@@ -119,7 +103,6 @@ class Session
     {
         return $this->formations;
     }
-
     /**
      * Set professeurs
      *
@@ -133,7 +116,6 @@ class Session
     
         return $this;
     }
-
     /**
      * Get professeurs
      *
@@ -143,7 +125,6 @@ class Session
     {
         return $this->professeurs;
     }
-
     /**
      * Set salles
      *
@@ -157,7 +138,6 @@ class Session
     
         return $this;
     }
-
     /**
      * Get salles
      *
@@ -168,4 +148,3 @@ class Session
         return $this->salles;
     }
 }
-

@@ -1,7 +1,4 @@
 <?php
-
-
-
 /**
  * Professeur
  */
@@ -11,18 +8,14 @@ class Professeur
      * @var integer
      */
     private $id;
-
     /**
      * @var string
      */
     private $nom;
-
     /**
      * @var string
      */
     private $prenom;
-
-
     /**
      * Get id
      *
@@ -32,7 +25,6 @@ class Professeur
     {
         return $this->id;
     }
-
     /**
      * Set nom
      *
@@ -46,7 +38,6 @@ class Professeur
     
         return $this;
     }
-
     /**
      * Get nom
      *
@@ -56,7 +47,6 @@ class Professeur
     {
         return $this->nom;
     }
-
     /**
      * Set prenom
      *
@@ -70,7 +60,6 @@ class Professeur
     
         return $this;
     }
-
     /**
      * Get prenom
      *
@@ -81,4 +70,3 @@ class Professeur
         return $this->prenom;
     }
 }
-

@@ -21,13 +21,34 @@
 		
 		$results = $query->getResult();
 
+		$formation = $entityManager->find('\Formation', $_GET['id_formation']);
+		$dateDebut = $formation->getDateDebut();
+		$dateFin = $formation->getDateFin();
+
+		echo '<p>';
+		echo 'Nom de la formation : ' . $formation->getNom() . '<br>';
+		echo 'Date de début : ' . $dateDebut->format('d/m/Y') . '<br>';
+		echo 'Date de fin : ' . $dateFin->format('d/m/Y') . '<br>';
+		echo 'Coût de la formation : ' . $formation->getCout() . ' €<br>';
+		echo '</p>';
+
+		echo 'Liste des sessions : <br>';
+		echo '<ul>';
+
 		foreach($results as $session)
 		{
 			$professeurId = $session->getProfesseurs()->getId();
 			$professeur = $entityManager->find('\Professeur', $professeurId);
+			$sessionDebut = $session->getDateDebut();
+			$sessionFin = $session->getDateFin();
 
-			echo '<a href="./professeur_detail.php?id_professeur=' . $professeurId . '">' . $professeur->getNom() . ' ' . $professeur->getPrenom() . '</a><br>';
+			echo '<li>';
+			echo 'Session le ' . $sessionDebut->format('d/m/y') . ' de ' . $sessionDebut->format('H:m') . ' à ' . $sessionFin->format('H:m');
+			echo ' avec <a href="./professeur_detail.php?id_professeur=' . $professeurId . '">' . $professeur->getNom() . ' ' . $professeur->getPrenom() . '</a><br>';
+			echo '</li>';
 		}
+
+		echo '</ul>';
 	}
 
 	$content = ob_get_clean();
