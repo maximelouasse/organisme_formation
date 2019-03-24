@@ -33,7 +33,7 @@ class Formation
     private $coã»t;
 
     /**
-     * @var \Professeurs
+     * @var \Professeur
      */
     private $professeurs;
 
@@ -147,11 +147,11 @@ class Formation
     /**
      * Set professeurs
      *
-     * @param \Professeurs $professeurs
+     * @param \Professeur $professeurs
      *
      * @return Formation
      */
-    public function setProfesseurs(\Professeurs $professeurs = null)
+    public function setProfesseurs(\Professeur $professeurs = null)
     {
         $this->professeurs = $professeurs;
     
@@ -161,7 +161,7 @@ class Formation
     /**
      * Get professeurs
      *
-     * @return \Professeurs
+     * @return \Professeur
      */
     public function getProfesseurs()
     {

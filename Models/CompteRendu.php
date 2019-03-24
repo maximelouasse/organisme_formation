@@ -18,12 +18,12 @@ class CompteRendu
     private $commentaire;
 
     /**
-     * @var \Professeurs
+     * @var \Professeur
      */
     private $professeurs;
 
     /**
-     * @var \Sessions
+     * @var \Session
      */
     private $sessions;
 
@@ -65,11 +65,11 @@ class CompteRendu
     /**
      * Set professeurs
      *
-     * @param \Professeurs $professeurs
+     * @param \Professeur $professeurs
      *
      * @return CompteRendu
      */
-    public function setProfesseurs(\Professeurs $professeurs = null)
+    public function setProfesseurs(\Professeur $professeurs = null)
     {
         $this->professeurs = $professeurs;
     
@@ -79,7 +79,7 @@ class CompteRendu
     /**
      * Get professeurs
      *
-     * @return \Professeurs
+     * @return \Professeur
      */
     public function getProfesseurs()
     {
@@ -89,11 +89,11 @@ class CompteRendu
     /**
      * Set sessions
      *
-     * @param \Sessions $sessions
+     * @param \Session $sessions
      *
      * @return CompteRendu
      */
-    public function setSessions(\Sessions $sessions = null)
+    public function setSessions(\Session $sessions = null)
     {
         $this->sessions = $sessions;
     
@@ -103,7 +103,7 @@ class CompteRendu
     /**
      * Get sessions
      *
-     * @return \Sessions
+     * @return \Session
      */
     public function getSessions()
     {

@@ -18,12 +18,12 @@ class Note
     private $note;
 
     /**
-     * @var \Formations
+     * @var \Formation
      */
     private $formations;
 
     /**
-     * @var \Salaries
+     * @var \Salarie
      */
     private $salaries;
 
@@ -65,11 +65,11 @@ class Note
     /**
      * Set formations
      *
-     * @param \Formations $formations
+     * @param \Formation $formations
      *
      * @return Note
      */
-    public function setFormations(\Formations $formations = null)
+    public function setFormations(\Formation $formations = null)
     {
         $this->formations = $formations;
     
@@ -79,7 +79,7 @@ class Note
     /**
      * Get formations
      *
-     * @return \Formations
+     * @return \Formation
      */
     public function getFormations()
     {
@@ -89,11 +89,11 @@ class Note
     /**
      * Set salaries
      *
-     * @param \Salaries $salaries
+     * @param \Salarie $salaries
      *
      * @return Note
      */
-    public function setSalaries(\Salaries $salaries = null)
+    public function setSalaries(\Salarie $salaries = null)
     {
         $this->salaries = $salaries;
     
@@ -103,7 +103,7 @@ class Note
     /**
      * Get salaries
      *
-     * @return \Salaries
+     * @return \Salarie
      */
     public function getSalaries()
     {

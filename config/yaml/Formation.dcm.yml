@@ -1,4 +1,5 @@
 Formation:
+    repositoryClass: FormationRepository
     type: entity
     table: formations
     indexes:
@@ -37,7 +38,7 @@ Formation:
             column: coût
     manyToOne:
         professeurs:
-            targetEntity: Professeurs
+            targetEntity: Professeur
             cascade: {  }
             fetch: LAZY
             mappedBy: null

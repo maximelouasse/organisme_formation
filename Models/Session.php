@@ -23,17 +23,17 @@ class Session
     private $datefin;
 
     /**
-     * @var \Formations
+     * @var \Formation
      */
     private $formations;
 
     /**
-     * @var \Professeurs
+     * @var \Professeur
      */
     private $professeurs;
 
     /**
-     * @var \Salles
+     * @var \Salle
      */
     private $salles;
 
@@ -99,11 +99,11 @@ class Session
     /**
      * Set formations
      *
-     * @param \Formations $formations
+     * @param \Formation $formations
      *
      * @return Session
      */
-    public function setFormations(\Formations $formations = null)
+    public function setFormations(\Formation $formations = null)
     {
         $this->formations = $formations;
     
@@ -113,7 +113,7 @@ class Session
     /**
      * Get formations
      *
-     * @return \Formations
+     * @return \Formation
      */
     public function getFormations()
     {
@@ -123,11 +123,11 @@ class Session
     /**
      * Set professeurs
      *
-     * @param \Professeurs $professeurs
+     * @param \Professeur $professeurs
      *
      * @return Session
      */
-    public function setProfesseurs(\Professeurs $professeurs = null)
+    public function setProfesseurs(\Professeur $professeurs = null)
     {
         $this->professeurs = $professeurs;
     
@@ -137,7 +137,7 @@ class Session
     /**
      * Get professeurs
      *
-     * @return \Professeurs
+     * @return \Professeur
      */
     public function getProfesseurs()
     {
@@ -147,11 +147,11 @@ class Session
     /**
      * Set salles
      *
-     * @param \Salles $salles
+     * @param \Salle $salles
      *
      * @return Session
      */
-    public function setSalles(\Salles $salles = null)
+    public function setSalles(\Salle $salles = null)
     {
         $this->salles = $salles;
     
@@ -161,7 +161,7 @@ class Session
     /**
      * Get salles
      *
-     * @return \Salles
+     * @return \Salle
      */
     public function getSalles()
     {

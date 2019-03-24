@@ -35,7 +35,7 @@ Salarie:
                 fixed: false
     manyToOne:
         entreprises:
-            targetEntity: Entreprises
+            targetEntity: Entreprise
             cascade: {  }
             fetch: LAZY
             mappedBy: null

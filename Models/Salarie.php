@@ -28,7 +28,7 @@ class Salarie
     private $poste;
 
     /**
-     * @var \Entreprises
+     * @var \Entreprise
      */
     private $entreprises;
 
@@ -118,11 +118,11 @@ class Salarie
     /**
      * Set entreprises
      *
-     * @param \Entreprises $entreprises
+     * @param \Entreprise $entreprises
      *
      * @return Salarie
      */
-    public function setEntreprises(\Entreprises $entreprises = null)
+    public function setEntreprises(\Entreprise $entreprises = null)
     {
         $this->entreprises = $entreprises;
     
@@ -132,7 +132,7 @@ class Salarie
     /**
      * Get entreprises
      *
-     * @return \Entreprises
+     * @return \Entreprise
      */
     public function getEntreprises()
     {

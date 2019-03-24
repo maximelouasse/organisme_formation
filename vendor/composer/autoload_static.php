@@ -107,6 +107,7 @@ class ComposerStaticInite9c210044307e2287e53521c61f11267
     );
 
     public static $classMap = array (
+        'CompteRendu' => __DIR__ . '/../..' . '/Models/CompteRendu.php',
         'Doctrine\\Common\\Annotations\\Annotation' => __DIR__ . '/..' . '/doctrine/annotations/lib/Doctrine/Common/Annotations/Annotation.php',
         'Doctrine\\Common\\Annotations\\AnnotationException' => __DIR__ . '/..' . '/doctrine/annotations/lib/Doctrine/Common/Annotations/AnnotationException.php',
         'Doctrine\\Common\\Annotations\\AnnotationReader' => __DIR__ . '/..' . '/doctrine/annotations/lib/Doctrine/Common/Annotations/AnnotationReader.php',
@@ -819,6 +820,11 @@ class ComposerStaticInite9c210044307e2287e53521c61f11267
         'Doctrine\\ORM\\Utility\\IdentifierFlattener' => __DIR__ . '/..' . '/doctrine/orm/lib/Doctrine/ORM/Utility/IdentifierFlattener.php',
         'Doctrine\\ORM\\Utility\\PersisterHelper' => __DIR__ . '/..' . '/doctrine/orm/lib/Doctrine/ORM/Utility/PersisterHelper.php',
         'Doctrine\\ORM\\Version' => __DIR__ . '/..' . '/doctrine/orm/lib/Doctrine/ORM/Version.php',
+        'Entreprise' => __DIR__ . '/../..' . '/Models/Entreprise.php',
+        'Formation' => __DIR__ . '/../..' . '/Models/Formation.php',
+        'FormationRepository' => __DIR__ . '/../..' . '/Models/FormationRepository.php',
+        'Note' => __DIR__ . '/../..' . '/Models/Note.php',
+        'Professeur' => __DIR__ . '/../..' . '/Models/Professeur.php',
         'Psr\\Log\\AbstractLogger' => __DIR__ . '/..' . '/psr/log/Psr/Log/AbstractLogger.php',
         'Psr\\Log\\InvalidArgumentException' => __DIR__ . '/..' . '/psr/log/Psr/Log/InvalidArgumentException.php',
         'Psr\\Log\\LogLevel' => __DIR__ . '/..' . '/psr/log/Psr/Log/LogLevel.php',
@@ -830,6 +836,9 @@ class ComposerStaticInite9c210044307e2287e53521c61f11267
         'Psr\\Log\\Test\\DummyTest' => __DIR__ . '/..' . '/psr/log/Psr/Log/Test/LoggerInterfaceTest.php',
         'Psr\\Log\\Test\\LoggerInterfaceTest' => __DIR__ . '/..' . '/psr/log/Psr/Log/Test/LoggerInterfaceTest.php',
         'Psr\\Log\\Test\\TestLogger' => __DIR__ . '/..' . '/psr/log/Psr/Log/Test/TestLogger.php',
+        'Salarie' => __DIR__ . '/../..' . '/Models/Salarie.php',
+        'Salle' => __DIR__ . '/../..' . '/Models/Salle.php',
+        'Session' => __DIR__ . '/../..' . '/Models/Session.php',
         'Symfony\\Component\\Console\\Application' => __DIR__ . '/..' . '/symfony/console/Application.php',
         'Symfony\\Component\\Console\\CommandLoader\\CommandLoaderInterface' => __DIR__ . '/..' . '/symfony/console/CommandLoader/CommandLoaderInterface.php',
         'Symfony\\Component\\Console\\CommandLoader\\ContainerCommandLoader' => __DIR__ . '/..' . '/symfony/console/CommandLoader/ContainerCommandLoader.php',
