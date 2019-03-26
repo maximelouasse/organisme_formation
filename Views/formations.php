@@ -1,5 +1,7 @@
 <?php
 
+	require_once 'bootstrap.php';
+
 	ob_start();
 
 	$formations = $entityManager->getRepository('\Formation')->findAll();

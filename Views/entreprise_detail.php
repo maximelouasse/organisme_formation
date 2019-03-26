@@ -4,8 +4,8 @@
 
     ob_start();
     
-    if(isset($_GET['id_entreprise'])){
-
+	if(isset($_GET['id_entreprise']))
+	{
         $entreprise = $entityManager->find('\Entreprise', $_GET['id_entreprise']);
 
         $title = $entreprise->getNom();
