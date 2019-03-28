@@ -21,10 +21,12 @@
 		
 		$results = $query->getResult();
 
+		$entrepriseId = $salarie->getEntreprises()->getId();
+
 		echo '<h1 class="display-4">' .$salarie->getNom() . ' ' . $salarie->getPrenom() . '</h1>';
 		echo '<p>';
 		echo 'Poste : ' . $salarie->GetPoste() . '<br>';
-		echo 'Entreprise : ' . $salarie->getEntreprises()->getNom() . ' <br>';
+		echo 'Entreprise : <a href="./entreprise_detail.php?id_entreprise='.$entrepriseId.'">' . $salarie->getEntreprises()->getNom() . '</a> <br>';
 		echo '</p>';
 
 		echo '<h3>Liste des formations :</h3>';
