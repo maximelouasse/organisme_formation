@@ -8,7 +8,7 @@
 	{
 		$salarie = $entityManager->find('\Salarie', $_GET['id_salarie']);
 		
-		$title = $salarie->getNom() . ' ' . $salarie->getPrenom();;
+		$title = $salarie->getNom() . ' ' . $salarie->getPrenom();
 
 		$queryBuilder = $entityManager->createQueryBuilder();
 
@@ -21,21 +21,49 @@
 		
 		$results = $query->getResult();
 
-		echo 'Liste des formations : <br>';
-		echo '<ul>';
+		echo '<h1 class="display-4">' .$salarie->getNom() . ' ' . $salarie->getPrenom() . '</h1>';
+		echo '<p>';
+		echo 'Poste : ' . $salarie->GetPoste() . '<br>';
+		echo 'Entreprise : ' . $salarie->getEntreprises()->getNom() . ' <br>';
+		echo '</p>';
 
-		foreach($results as $inscription)
-		{
-			$formation = $inscription->getFormations();
+		echo '<h3>Liste des formations :</h3>';
+		?>
+		
+		<table class="table table-striped table-bordered">
+			<thead>
+				<tr>
+					<th>Nom formation</th>
+					<th>Note /20</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+			<?php if(empty($results)){ ?>
+				<tr>
+					<td class="text-center" colspan ="6">
+						Aucune formation
+					</td>
+				</tr>
+			<?php }
+				foreach($results as $inscription)
+				{
+					$formation = $inscription->getFormations();
+					$formationId = $formation->getId();
+					
+					?>
+					<tr>
+						<td><?= $formation->getNom(); ?></td>
+						<td><?= $inscription->getNote(). '/20'; ?></td>
+						<td><a href="./formation_detail.php?id_formation=<?= $formationId; ?>">Détail</a></td>
+					</tr>
+					<?php
+				}
+				?>
+			</tbody>
+		</table>
 
-			echo '<li>';
-			echo '<a href="./formation_detail.php?id_formation=' . $formation->getId() . '">' . $formation->getNom() . '</a> : ';
-			echo $inscription->getNote() . '/20<br>';
-			echo '</li>';
-		}
-
-		echo '</ul>';
-
+		<?php
 	}
 	
 	$content = ob_get_clean();
