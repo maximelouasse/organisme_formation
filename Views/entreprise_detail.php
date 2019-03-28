@@ -21,28 +21,50 @@
 		
         $results = $query->getResult();
 
-        echo '<p>';
-        echo 'Nom de l\'entreprise : ' . $entreprise->getNom() . '<br>';
+        echo '<h1 class="display-4">' . $entreprise->getNom() . '</h1>';
         
-        echo 'Liste des Salariés : <br>';
-        echo '<ul>';
+        echo '<h3>Liste des salariés :</h3>';
 
-        foreach($results as $salarie)
-		{
-			$salarieId = $salarie->getId();
-			$nom = $salarie->getNom();
-			$prenom = $salarie->getPrenom();
-			$poste = $salarie->getPoste();
+        ?>
+		
+		<table class="table table-striped table-bordered">
+			<thead>
+				<tr>
+					<th>Id salarié</th>
+					<th>Nom salarié</th>
+                    <th>Prenom salarié</th>
+                    <th>Poste salarié</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				<?php if(empty($results)){ ?>
+					<tr>
+						<td class="text-center" colspan ="6">
+							Aucune session
+						</td>
+					</tr>
+				<?php }
 
-			echo '<li>';
-            echo 'Nom : ' . $nom . ' <br> ';
-            echo 'Prenom : ' . $prenom . ' <br> ';
-            echo 'Poste : ' . $poste . ' <br> ';
-            echo '<a href="./salarie_detail.php?id_salarie=' . $salarieId . '"> Voir le detail de l\'utilisateur </a>';
-			echo '</li>';
-        }
-        
-        echo '</ul>';
+                foreach($results as $salarie)
+                {
+                    $salarieId = $salarie->getId();
+                    $nom = $salarie->getNom();
+                    $prenom = $salarie->getPrenom();
+                    $poste = $salarie->getPoste();
+                    ?>
+                    <tr>
+                        <td><?= $salarieId; ?></td>
+                        <td><?= $nom; ?></td>
+                        <td><?= $prenom; ?></td>
+                        <td><?= $poste; ?></td>
+                        <td><a href="./salarie_detail.php?id_salarie=<?= $salarieId; ?>">Détail</a></td>
+                    </tr>
+                    <?php
+                } ?>
+            </tbody>
+	    </table>
+        <?php
     
     }
 
