@@ -29,7 +29,9 @@
 		echo 'Numero session : ' . $session->GetId() . '<br>';
 		echo 'Date de début : ' . $dateDebut->format('d/m/Y') . '<br>';
 		echo 'Date de fin : ' . $dateFin->format('d/m/Y') . '<br>';
-		//echo 'Coût de la formation : ' . $session->getCout() . ' €<br>';
+		echo 'Nom formation : ' . $session->getFormations()->getNom() . ' <br>';
+		echo 'Nom professeur : ' . $session->getProfesseurs()->getPrenom() . ' '. $session->getProfesseurs()->getNom()  .' <br>';
+		echo 'Numero de salle : ' . $session->getSalles()->getId() . ' <br>';
 		echo '</p>';
 
 		echo 'Liste des compte rendus : <br>';
