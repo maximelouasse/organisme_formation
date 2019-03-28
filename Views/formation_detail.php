@@ -42,8 +42,8 @@
 				<tr>
 					<th>Id session</th>
 					<th>Date session</th>
-					<th>Date début</th>
-					<th>Date fin</th>
+					<th>Heure début</th>
+					<th>Heure fin</th>
 					<th>Professeur</th>
 					<th></th>
 				</tr>
