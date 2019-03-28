@@ -49,7 +49,14 @@
 				</tr>
 			</thead>
 			<tbody>
-				<?php
+				<?php if(empty($results)){ ?>
+					<tr>
+						<td class="text-center" colspan ="6">
+							Aucune session
+						</td>
+					</tr>
+				<?php }
+				
 				foreach($results as $session)
 				{
 					$sessionId = $session->getId();
