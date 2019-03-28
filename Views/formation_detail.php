@@ -37,6 +37,7 @@
 
 		foreach($results as $session)
 		{
+			$sessionId = $session->getId();
 			$professeurId = $session->getProfesseurs()->getId();
 			$professeur = $entityManager->find('\Professeur', $professeurId);
 			$sessionDebut = $session->getDateDebut();
@@ -44,6 +45,7 @@
 
 			echo '<li>';
 			echo 'Session le ' . $sessionDebut->format('d/m/y') . ' de ' . $sessionDebut->format('H:m') . ' à ' . $sessionFin->format('H:m');
+			echo '<a href="./session_detail.php?id_session=' . $sessionId . '"> (détail de la session)</a>';
 			echo ' avec <a href="./professeur_detail.php?id_professeur=' . $professeurId . '">' . $professeur->getNom() . ' ' . $professeur->getPrenom() . '</a><br>';
 			echo '</li>';
 		}
