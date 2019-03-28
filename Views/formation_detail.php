@@ -25,32 +25,61 @@
 		$dateDebut = $formation->getDateDebut();
 		$dateFin = $formation->getDateFin();
 
+		echo '<h1 class="display-4">' . $formation->getNom() . '</h1>';
+
 		echo '<p>';
-		echo 'Nom de la formation : ' . $formation->getNom() . '<br>';
 		echo 'Date de début : ' . $dateDebut->format('d/m/Y') . '<br>';
 		echo 'Date de fin : ' . $dateFin->format('d/m/Y') . '<br>';
 		echo 'Coût de la formation : ' . $formation->getCout() . ' €<br>';
 		echo '</p>';
 
-		echo 'Liste des sessions : <br>';
-		echo '<ul>';
+		echo '<h3>Liste des sessions :</h3>';
 
-		foreach($results as $session)
-		{
-			$sessionId = $session->getId();
-			$professeurId = $session->getProfesseurs()->getId();
-			$professeur = $entityManager->find('\Professeur', $professeurId);
-			$sessionDebut = $session->getDateDebut();
-			$sessionFin = $session->getDateFin();
+		?>
+		
+		<table class="table table-striped table-bordered">
+			<thead>
+				<tr>
+					<th>Id session</th>
+					<th>Date session</th>
+					<th>Heure début</th>
+					<th>Heure fin</th>
+					<th>Professeur</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				<?php if(empty($results)){ ?>
+					<tr>
+						<td class="text-center" colspan ="6">
+							Aucune session
+						</td>
+					</tr>
+				<?php }
+				
+				foreach($results as $session)
+				{
+					$sessionId = $session->getId();
+					$professeurId = $session->getProfesseurs()->getId();
+					$professeur = $entityManager->find('\Professeur', $professeurId);
+					$sessionDebut = $session->getDateDebut();
+					$sessionFin = $session->getDateFin();
+					?>
+					<tr>
+						<td><?= $sessionId; ?></td>
+						<td><?= $sessionDebut->format('d/m/y'); ?></td>
+						<td><?= $sessionDebut->format('H:m'); ?></td>
+						<td><?= $sessionFin->format('H:m'); ?></td>
+						<td><a href="./professeur_detail.php?id_professeur=<?= $professeurId; ?>"><?= $professeur->getNom() . ' ' . $professeur->getPrenom(); ?></a></td>
+						<td><a href="./session_detail.php?id_session=<?= $sessionId; ?>">Détail</a></td>
+					</tr>
+					<?php
+				}
+				?>
+			</tbody>
+		</table>
 
-			echo '<li>';
-			echo 'Session le ' . $sessionDebut->format('d/m/y') . ' de ' . $sessionDebut->format('H:m') . ' à ' . $sessionFin->format('H:m');
-			echo '<a href="./session_detail.php?id_session=' . $sessionId . '"> (détail de la session)</a>';
-			echo ' avec <a href="./professeur_detail.php?id_professeur=' . $professeurId . '">' . $professeur->getNom() . ' ' . $professeur->getPrenom() . '</a><br>';
-			echo '</li>';
-		}
-
-		echo '</ul>';
+		<?php
 	}
 
 	$content = ob_get_clean();

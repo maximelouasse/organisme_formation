@@ -9,8 +9,8 @@
 		<link rel="stylesheet" href="../css/bootstrap.min.css">
 	</head>
 	<body>
-		
-		<?= $content; ?>
-
+		<div class="container">
+			<?= $content; ?>
+		</div>
 	</body>
 </html>
