@@ -10,7 +10,7 @@
 		
 		$title = $salarie->getNom() . ' ' . $salarie->getPrenom();
 
-		$queryBuilder = $entityManager->createQueryBuilder();
+		/*$queryBuilder = $entityManager->createQueryBuilder();
 
 		$queryBuilder->select('n')
 			->from('Note', 'n')
@@ -19,14 +19,16 @@
 
 		$query = $queryBuilder->getQuery();
 		
-		$results = $query->getResult();
+		$results = $query->getResult();*/
+
+		$salarie_detail = $entityManager->getRepository('\Salarie')->getSalarie($_GET['id_salarie']);
 
 		$entrepriseId = $salarie->getEntreprises()->getId();
 
-		echo '<h1 class="display-4">' .$salarie->getNom() . ' ' . $salarie->getPrenom() . '</h1>';
+		echo '<h1 class="display-4">' .$salarie_detail[0]->getNom() . ' ' . $salarie_detail[0]->getPrenom() . '</h1>';
 		echo '<p>';
-		echo 'Poste : ' . $salarie->GetPoste() . '<br>';
-		echo 'Entreprise : <a href="./entreprise_detail.php?id_entreprise='.$entrepriseId.'">' . $salarie->getEntreprises()->getNom() . '</a> <br>';
+		echo 'Poste : ' . $salarie_detail[0]->GetPoste() . '<br>';
+		echo 'Entreprise : <a href="./entreprise_detail.php?id_entreprise='.$entrepriseId.'">' . $salarie_detail[0]->getEntreprises()->getNom() . '</a> <br>';
 		echo '</p>';
 
 		echo '<h3>Liste des formations :</h3>';

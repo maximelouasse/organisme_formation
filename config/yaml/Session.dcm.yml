@@ -60,4 +60,18 @@ Session:
                 salles_id:
                     referencedColumnName: id
             orphanRemoval: false
+    manyToMany:
+        salaries:
+            targetEntity: salarie
+            inversedBy: session
+            joinTable:
+                name: salaries
+                joinColumns:
+                    id:
+                        referencedColumnName: id
+                        nullable: false
+                inverseJoinColumns:
+                    id:
+                        referencedColumnName: id
+                        nullable: false
     lifecycleCallbacks: {  }

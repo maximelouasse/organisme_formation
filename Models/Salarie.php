@@ -1,4 +1,7 @@
 <?php
+
+
+
 /**
  * Salarie
  */
@@ -8,22 +11,40 @@ class Salarie
      * @var integer
      */
     private $id;
+
     /**
      * @var string
      */
     private $nom;
+
     /**
      * @var string
      */
     private $prenom;
+
     /**
      * @var string
      */
     private $poste;
+
     /**
      * @var \Entreprise
      */
     private $entreprises;
+
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $sessions;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->sessions = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
     /**
      * Get id
      *
@@ -33,6 +54,7 @@ class Salarie
     {
         return $this->id;
     }
+
     /**
      * Set nom
      *
@@ -46,6 +68,7 @@ class Salarie
     
         return $this;
     }
+
     /**
      * Get nom
      *
@@ -55,6 +78,7 @@ class Salarie
     {
         return $this->nom;
     }
+
     /**
      * Set prenom
      *
@@ -68,6 +92,7 @@ class Salarie
     
         return $this;
     }
+
     /**
      * Get prenom
      *
@@ -77,6 +102,7 @@ class Salarie
     {
         return $this->prenom;
     }
+
     /**
      * Set poste
      *
@@ -90,6 +116,7 @@ class Salarie
     
         return $this;
     }
+
     /**
      * Get poste
      *
@@ -99,6 +126,7 @@ class Salarie
     {
         return $this->poste;
     }
+
     /**
      * Set entreprises
      *
@@ -112,6 +140,7 @@ class Salarie
     
         return $this;
     }
+
     /**
      * Get entreprises
      *
@@ -121,4 +150,39 @@ class Salarie
     {
         return $this->entreprises;
     }
+
+    /**
+     * Add session
+     *
+     * @param \session $session
+     *
+     * @return Salarie
+     */
+    public function addSession(\session $session)
+    {
+        $this->sessions[] = $session;
+    
+        return $this;
+    }
+
+    /**
+     * Remove session
+     *
+     * @param \session $session
+     */
+    public function removeSession(\session $session)
+    {
+        $this->sessions->removeElement($session);
+    }
+
+    /**
+     * Get sessions
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getSessions()
+    {
+        return $this->sessions;
+    }
 }
+

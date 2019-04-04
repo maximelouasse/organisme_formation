@@ -1,4 +1,7 @@
 <?php
+
+
+
 /**
  * Formation
  */
@@ -8,26 +11,33 @@ class Formation
      * @var integer
      */
     private $id;
+
     /**
      * @var string
      */
     private $nom;
+
     /**
      * @var \DateTime
      */
     private $datedebut;
+
     /**
      * @var \DateTime
      */
     private $datefin;
+
     /**
      * @var float
      */
     private $cout;
+
     /**
      * @var \Professeur
      */
     private $professeurs;
+
+
     /**
      * Get id
      *
@@ -37,6 +47,7 @@ class Formation
     {
         return $this->id;
     }
+
     /**
      * Set nom
      *
@@ -50,6 +61,7 @@ class Formation
     
         return $this;
     }
+
     /**
      * Get nom
      *
@@ -59,6 +71,7 @@ class Formation
     {
         return $this->nom;
     }
+
     /**
      * Set datedebut
      *
@@ -72,6 +85,7 @@ class Formation
     
         return $this;
     }
+
     /**
      * Get datedebut
      *
@@ -81,6 +95,7 @@ class Formation
     {
         return $this->datedebut;
     }
+
     /**
      * Set datefin
      *
@@ -94,6 +109,7 @@ class Formation
     
         return $this;
     }
+
     /**
      * Get datefin
      *
@@ -103,6 +119,7 @@ class Formation
     {
         return $this->datefin;
     }
+
     /**
      * Set cout
      *
@@ -116,6 +133,7 @@ class Formation
     
         return $this;
     }
+
     /**
      * Get cout
      *
@@ -125,6 +143,7 @@ class Formation
     {
         return $this->cout;
     }
+
     /**
      * Set professeurs
      *
@@ -138,6 +157,7 @@ class Formation
     
         return $this;
     }
+
     /**
      * Get professeurs
      *
@@ -148,3 +168,4 @@ class Formation
         return $this->professeurs;
     }
 }
+

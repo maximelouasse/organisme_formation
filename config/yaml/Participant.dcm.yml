@@ -1,0 +1,41 @@
+Participant:
+    type: entity
+    table: participants
+    indexes:
+        fk_salaries_has_sessions_sessions1_idx:
+            columns:
+                - sessions_id
+        fk_salaries_has_sessions_salaries1_idx:
+            columns:
+                - salaries_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    manyToOne:
+        salaries:
+            targetEntity: Salarie
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                salaries_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+        sessions:
+            targetEntity: Session
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                sessions_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

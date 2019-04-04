@@ -1,4 +1,7 @@
 <?php
+
+
+
 /**
  * Session
  */
@@ -8,26 +11,45 @@ class Session
      * @var integer
      */
     private $id;
+
     /**
      * @var \DateTime
      */
     private $datedebut;
+
     /**
      * @var \DateTime
      */
     private $datefin;
+
     /**
      * @var \Formation
      */
     private $formations;
+
     /**
      * @var \Professeur
      */
     private $professeurs;
+
     /**
      * @var \Salle
      */
     private $salles;
+
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $salaries;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->salaries = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
     /**
      * Get id
      *
@@ -37,6 +59,7 @@ class Session
     {
         return $this->id;
     }
+
     /**
      * Set datedebut
      *
@@ -50,6 +73,7 @@ class Session
     
         return $this;
     }
+
     /**
      * Get datedebut
      *
@@ -59,6 +83,7 @@ class Session
     {
         return $this->datedebut;
     }
+
     /**
      * Set datefin
      *
@@ -72,6 +97,7 @@ class Session
     
         return $this;
     }
+
     /**
      * Get datefin
      *
@@ -81,6 +107,7 @@ class Session
     {
         return $this->datefin;
     }
+
     /**
      * Set formations
      *
@@ -94,6 +121,7 @@ class Session
     
         return $this;
     }
+
     /**
      * Get formations
      *
@@ -103,6 +131,7 @@ class Session
     {
         return $this->formations;
     }
+
     /**
      * Set professeurs
      *
@@ -116,6 +145,7 @@ class Session
     
         return $this;
     }
+
     /**
      * Get professeurs
      *
@@ -125,6 +155,7 @@ class Session
     {
         return $this->professeurs;
     }
+
     /**
      * Set salles
      *
@@ -138,6 +169,7 @@ class Session
     
         return $this;
     }
+
     /**
      * Get salles
      *
@@ -147,4 +179,39 @@ class Session
     {
         return $this->salles;
     }
+
+    /**
+     * Add salary
+     *
+     * @param \salarie $salary
+     *
+     * @return Session
+     */
+    public function addSalary(\salarie $salary)
+    {
+        $this->salaries[] = $salary;
+    
+        return $this;
+    }
+
+    /**
+     * Remove salary
+     *
+     * @param \salarie $salary
+     */
+    public function removeSalary(\salarie $salary)
+    {
+        $this->salaries->removeElement($salary);
+    }
+
+    /**
+     * Get salaries
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getSalaries()
+    {
+        return $this->salaries;
+    }
 }
+

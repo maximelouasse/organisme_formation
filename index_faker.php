@@ -21,8 +21,8 @@
 
 	$populator->addEntity('\Formation', 20, array(
 		'nom' => function() use ($generator) { return $generator->word(); },
-		'dateDebut' => function() use ($generator) { return $generator->dateTimeThisYear('Europe/Paris'); },
-		'dateFin' => function() use ($generator) { return $generator->dateTimeThisYear('Europe/Paris'); },
+		'dateDebut' => function() use ($generator) { return $generator->dateTimeBetween('+0 years', '+30 days', 'Europe/Paris'); },
+		'dateFin' => function() use ($generator) { return $generator->dateTimeBetween('+40 days', '+50 days', 'Europe/Paris'); },
 		'cout' => function() use ($generator) { return $generator->numberBetween(500, 10000); }
 	));
 
@@ -44,8 +44,8 @@
 	));
 
 	$populator->addEntity('\Session', 100, array(
-		'dateDebut' => function() use ($generator) { return $generator->dateTime(); },
-		'dateFin' => function() use ($generator) { return $generator->dateTimeInInterval('now', '+ 4 hours', 'Europe/Paris'); }
+		'dateDebut' => function() use ($generator) { return $generator->dateTimeBetween('+0 years', '+ 4 hours', 'Europe/Paris'); },
+		'dateFin' => function() use ($generator) { return $generator->dateTimeBetween('+0 hours', '+ 4 hours', 'Europe/Paris'); }
 	));
 
 	$populator->addEntity('\CompteRendu', 100, array(

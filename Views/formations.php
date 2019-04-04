@@ -32,7 +32,7 @@
 			{
 				?>
 				<td><?= $formation->getId(); ?></td>
-						<td><?= $formation->getNom(); ?></td>
+						<td><?= ucfirst($formation->getNom()); ?></td>
 						<td><a href="./formation_detail.php?id_formation=<?= $formation->getId(); ?>">Détail</a></td>
 				</tr>
 				<?php
